@@ -1,0 +1,148 @@
+Chosen scenario: <1>. <Messenger>
+
+User Stories and Prioritization
+(Your stories should be sorted by their priority.
+For example, all priority 1 stories need to be ranked top.
+The order does not matter within the same priority.)
+===============================
+1: 
+Title: New Conversation
+Priority: 1
+Units (Story Points): 2
+When a user clicks on a new conversation button, they are prompted to enter a number that they would like to communicate with. If the number is not valid, then they receive an error message to enter a valid number.  
+
+2:
+Title: Send/Receive Text Message
+Priority: 1
+Units (Story Points): 2
+When a user enters text through their keyboard into their chatbox and clicks the send button, the recipients of the message should receive that text from the other end. If there is a connection or message transfer error, the user is notified. 
+
+3:
+Title: Send/Receive Image
+Priority: 1
+Units (Story Points): 3
+The user should be able to attach/upload an image by clicking the attach image button. When the user clicks the send button, the recipient of the message should receive the image from the other end. If there is an error attaching/uploading the image or sending it, the user is notified. 
+
+
+4:
+Title: Send/Receive Video
+Priority: 1
+Units (Story Points): 3
+The user should be able to attach/upload a video by clicking the attach video button. When the user clicks the send button, the recipient of the message should receive the video from the other end. If there is an error uploading/attaching the image or sending it, the user is notified. 
+
+5:
+Title:  Dialogue page/Scrollable page 
+Priority: 2
+Units (Story Points): 4
+When a user opens a conversation, they should be able to see a history of all the messages that have successfully been exchanged between themselves and the recipient. As they scroll up, they go further back in time until they get to the first message that was sent/received. 
+
+6:
+Title: Delete Message
+Priority: 2
+Units (Story Points): 1
+When the user selects a message a button giving the user the option to delete that message should appear. When the user clicks the button the message should be deleted and not viewable by the user or any recipients. 
+
+7:
+Title:  Show Timestamps
+Priority: 2
+Units (Story Points): 2
+When the user gets into the dialogue page, there should be timestamps to separate messages if the time range for the consecutive two messages is over 24 hours. If the time range for the consecutive two messages is less than or equal to 24 hours, the time stamps will not show in the dialog page.
+
+8:
+Title: Search Contact
+Priority: 2
+Units (Story Points): 3
+When a user clicks the search contact button and type others’ ID or number, the other person’s profile will be shown to the user. If the ID or number is not valid, or the targeted person hides their information, then they receive an error message to enter a valid ID or number.  
+
+
+9:
+Title: Add contact
+Priority: 3
+Units (Story Points): 1
+If the user successfully searched someone else profile, he/she will be able to send a request to add this person. If the request has been successfully sent, a short success message will pump out, otherwise a short fail message will pump out.
+
+10:
+Title: Media History
+Priority: 3
+Units (Story Points): 3
+When the user gets into the dialogue page and click the media history button, all images and videos, except for the text messages, will show in a new page. If there are no images or videos for the specific dialog page, the new page will show “Empty Media History”.
+
+11:
+Title: Edit Profile
+Priority: 2
+Units (Story Points): 3
+When the user clicks the edit button on his profile page, they should be able to change their personal information. Upon successfully change, a message will pump out.
+
+12:
+Title: Encryption/Decryption
+Priority: 3
+Units (Story Points): 7
+When the user send text/image/video messages to others, the messages will first be encrypted in their local mobile devices, and then securely transferred to targeted person’s devices, and then decrypted on that targeted person’s devices. Nobody else should be able to decrypt the message. Upon successful encryption, a tiny notification will show in the dialog. 
+
+Iterations
+==========
+
+Hours per Unit: 10
+Hours per Week: 35
+
+* Iteration 1:
+
+** Week 1:
+<New Conversation (1)>
+
+** Week 2:
+<Send/Receive Text Message (2)>
+
+* Iteration 2:
+
+** Week 3:
+<Send/Receive Image (3)>
+
+** Week 4:
+<Send/Receive Video (4)>
+
+* Iteration 3:
+
+** Week 5:
+<Dialogue page/Scrollable page (5)>
+
+** Week 6:
+<Dialogue page/Scrollable page (5)>
+<Delete Message (6)>
+
+* Iteration 4:
+
+** Week 7:
+<Show Timestamps (7)>
+
+** Week 8:
+<Search Contact (8)>
+
+* Iteration 5:
+
+** Week 9:
+<Add contact (9)>
+<Media History (10)>
+
+** Week 10:
+<Media History (10)>
+<Edit Profile (11)>
+
+* Iteration 6:
+
+** Week 11:
+<Encryption/Decryption (12)>
+
+** Week 12:
+<Encryption/Decryption (12)>
+
+Breaking the Most Complex User Story into at Least 3 Tasks
+==========================================================
+
+<Encryption/Decryption (12)>
+Task A: Encryption
+Once the user has pressed the send button,and before the message is sent over the HTTP protocol, we will encrypt the message using UTF-8. 
+Task B: Transfer
+After the message is encrypted, we will send the user’s message using the Client/Server protocol via HTTP. 
+Task C: Decryption
+Once the encrypted message has been successfully received by the recipient, we will decrypt the message before displaying it to the recipient. 
